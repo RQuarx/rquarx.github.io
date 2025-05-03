@@ -1,0 +1,127 @@
+:root {
+    /* background-color: black; */
+}
+
+.status {
+    background-color: #0E1215;
+    box-shadow: 0px -1px cyan;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    position: absolute;
+    display: grid;
+    width: 100%;
+    height: 21px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.status::before {
+    content: "";
+    position: absolute;
+    bottom: 21px;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    border-bottom-left-radius: 50%;
+    z-index: 0;
+    background-color: transparent;
+    box-shadow: -5px 5px #283039;
+    border-left: 1px solid cyan;
+    border-bottom: 1px solid cyan;
+}
+
+.status::after {
+    content: "";
+    position: absolute;
+    bottom: 21px;
+    right: 0px;
+    height: 20px;
+    width: 20px;
+    border-bottom-right-radius: 50%;
+    z-index: 0;
+    background-color: transparent;
+    box-shadow: 5px 5px #283039;
+    border-right: 1px solid cyan;
+    border-bottom: 1px solid cyan;
+}
+
+.status .time {
+    grid-column-start: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    line-height: 0.85;
+    background-color: #283039;
+    border-radius: 0px 100px 0px 0px;
+    width: fit-content;
+    padding: 0px 20px 0px 5px;
+    position: relative;
+}
+.status .bracket {
+    font-size: 13px;
+    color: cyan;
+}
+
+.status .time::after {
+    content: "";
+    position: absolute;
+    left: 10.1em;
+    height: 20px;
+    width: 50px;
+    border-bottom-left-radius: 75%;
+    background-color: transparent;
+    box-shadow: -7px 8px #283039;
+    margin-left: -4px;
+}
+
+.status .projects {
+    color: white;
+    grid-column-start: 2;
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    padding: 0px 30px;
+    border-radius: 100px 100px 0px 0px;
+    background-color: #283039;
+}
+
+.status .projects::before {
+    content: "";
+    position: absolute;
+    right: 10.1em;
+    height: 20px;
+    width: 50px;
+    border-bottom-right-radius: 75%;
+    background-color: transparent;
+    box-shadow: 7px 8px #283039;
+    margin-right: -5px;
+}
+
+.status .projects::after {
+    content: "";
+    position: absolute;
+    left: 10.1em;
+    height: 20px;
+    width: 50px;
+    border-bottom-left-radius: 75%;
+    background-color: transparent;
+    box-shadow: -7px 8px #283039;
+    margin-left: -5px;
+}
+
+#current-time,#current-day {
+    text-align: center;
+}
+
+.status .yay {
+    grid-column-start: 3;
+    color: white;
+    text-align: end;
+}
+
+.time-bracket {
+    color: cyan;
+}
